@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <ul id="mensagens"></ul>
+
+    <form onsubmit="sendLogin(event)">
+        Insira seu Login
+
+        <input name="login" />
+    </form>
+
+    <form id="message_form" onsubmit="send(event)" style="display: none;" >        
+        Digite sua mensagem
+
+        <input name="text" onkeyup="keyup(event)" onkeydown="keydown(event)" />
+
+        <button >Enviar</button>
+    </form>
+
+    <div id="status"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
