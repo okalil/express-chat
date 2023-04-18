@@ -8,7 +8,7 @@ app.use(express.static("public"))
 const httpServer = require('http').createServer(app)
 const socketServer = new io.Server(httpServer)
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 httpServer.listen(PORT, () => console.log('Servidor iniciado na porta: ', PORT))
 
